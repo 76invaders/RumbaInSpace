@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlayerCameraControl : MonoBehaviour
 {
-    Transform tr;
+    Transform _transform;
     void Start()
     {
-        tr = GetComponent<Transform>();
+        _transform = GetComponent<Transform>();
     }
     void Update()
     {
-        tr.rotation = new Quaternion (0, 0, tr.rotation.z + 10f, 0) ;
+        _transform.rotation = new Quaternion (0, 0, _transform.rotation.z + 10f, 0) ;
     }
 }
