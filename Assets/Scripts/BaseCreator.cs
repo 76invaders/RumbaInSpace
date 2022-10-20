@@ -8,6 +8,6 @@ public class BaseCreator : MonoBehaviour
     public GameObject spaceBase;
     void CreateBase(GameObject spaceBase)
     {
-        Instantiate(spaceBase, new Vector3(16,0,0), new Quaternion(0,0,0,0));
+        Instantiate(spaceBase, new Vector3(16,0,-4), new Quaternion(0,0,0,0));
     }
 }
