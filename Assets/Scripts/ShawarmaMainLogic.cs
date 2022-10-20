@@ -28,22 +28,22 @@ public class ShawarmaMainLogic : MonoBehaviour
 
     private void Update()
     {
-        if (transform.position.x < -30)
+        if (transform.position.x < -35)
         {
-            transform.position = new Vector3(30f, transform.position.y, 0);
+            transform.position = new Vector3(35f, transform.position.y, 0);
         }
-        else if (transform.position.x > 30)
+        else if (transform.position.x > 35)
         {
-            transform.position = new Vector3(-30f, transform.position.y, 0);
+            transform.position = new Vector3(-35f, transform.position.y, 0);
         }
 
-        if (transform.position.y < -16)
+        if (transform.position.y < -20)
         {
-            transform.position = new Vector3(transform.position.x, 16f, 0);
+            transform.position = new Vector3(transform.position.x, 20f, 0);
         }
-        else if (transform.position.y > 16)
+        else if (transform.position.y > 20)
         {
-            transform.position = new Vector3(transform.position.x, -16f, 0);
+            transform.position = new Vector3(transform.position.x, -20f, 0);
         }
     }
     private void FixedUpdate()
