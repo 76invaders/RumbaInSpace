@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class FirstEncounterEnemy : MonoBehaviour
 {
-    Enemy _enemy;
+    Enemy _enemy; //убрать
     private void Start()
     {
         gameObject.AddComponent<Enemy>();
