@@ -331,7 +331,7 @@ GameObject:
   - component: {fileID: 8356696934605199698}
   m_Layer: 0
   m_Name: FREESPACESHIPS
-  m_TagString: Untagged
+  m_TagString: Base
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
