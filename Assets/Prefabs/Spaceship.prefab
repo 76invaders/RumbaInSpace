@@ -14,8 +14,10 @@ GameObject:
   - component: {fileID: 1114146111135793507}
   - component: {fileID: 1114146111135793508}
   - component: {fileID: 5089911957740446203}
+  - component: {fileID: 6295417264349423750}
+  - component: {fileID: -49767169456104552}
   m_Layer: 0
-  m_Name: Spacesip
+  m_Name: Spaceship
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,10 +98,10 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1114146111135793434}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -164,6 +166,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _firePoint: {fileID: 6659465575330161153}
   _missle: {fileID: 8415270412203042353, guid: e6f934d3e58c42a4c98f0301797c6e35, type: 3}
+--- !u!114 &6295417264349423750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114146111135793434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de7b67c9159b31f47b5452bbef0e4a8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _explosion: {fileID: 402685171827760845, guid: ee4db49ceaa384648a08726315d323aa, type: 3}
+--- !u!95 &-49767169456104552
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114146111135793434}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9a7e70ace673bc4db776c01e18f6457, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5795140811933011856
 GameObject:
   m_ObjectHideFlags: 0

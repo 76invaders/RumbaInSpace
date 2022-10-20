@@ -6,7 +6,7 @@ public class ShawarmaAnimator : MonoBehaviour
 {
     void OnTriggerEnter2D()
     {
-        Debug.Log("Äðûã!");
+        GetComponent<FirstEncounterEnemy>().ReciveDammage(10);
         GetComponent<Animator>().Play("Shacking");
     }
 }
