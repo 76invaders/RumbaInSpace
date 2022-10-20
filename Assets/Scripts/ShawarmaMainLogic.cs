@@ -23,6 +23,10 @@ public class ShawarmaMainLogic : MonoBehaviour
     {
         if (_health <= 0)
         {
+            if (_nextHealth < 10)
+                {
+                Destroy(gameObject);
+                }
             _health = _nextHealth;
             _nextShawarma = gameObject;
             Instantiate(_nextShawarma, transform.position, transform.rotation);
