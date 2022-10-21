@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,7 @@ using UnityEngine;
 public class BossLogic : MonoBehaviour
 {
     Animator _animator;
-    public GameObject _missle, _automissle, _attentionmarker, _boom;
+    public GameObject _missle, _automissle, _attentionmarker, _boom, _bigBoom;
     public GameObject[] guns = new GameObject[5];
 
     Vector3 _defaultPosition = new Vector3(0, 8, 0);
@@ -17,16 +18,38 @@ public class BossLogic : MonoBehaviour
         _animator = GetComponent<Animator>();
         _animator.Play("BossAppear");
     }
-
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        
+        if (hitInfo.tag == "Missle")
+        {
+            _bossHealth -= 100;
+            Debug.Log(_bossHealth);
+        }
+        else if (hitInfo.tag == "Player")
+        {
+            _bossHealth -= 200;
+            Debug.Log(_bossHealth);
+        }
     }
 
-    void ExplosionSpavner()
+    void ExplosionSpawner()
     { 
-        Vector3 Spawnposition = new Vector3(transform.position.x + Random.Range(-12.0f,12.0f), transform.position.y + Random.Range(-12.0f, 12.0f), 0);
+        Vector3 Spawnposition = new Vector3(transform.position.x + UnityEngine.Random.Range(-12.0f,12.0f), transform.position.y + UnityEngine.Random.Range(-12.0f, 7.0f), 0);
         Instantiate(_boom, Spawnposition, new Quaternion(0, 0, 0, 0));
+    }
+
+    void FinalBlow()
+    {
+        Instantiate(_bigBoom, new Vector3(transform.position.x, transform.position.y, 0), new Quaternion(0, 0, 0, 0));
+    }
+
+    void ColliderActivator()
+    {
+        gameObject.GetComponent<BoxCollider2D>().enabled = true;
+    }
+
+    void ColliderDeactivator()
+    {
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
     }
 }

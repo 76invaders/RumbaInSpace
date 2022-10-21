@@ -149,7 +149,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1216608657463827152}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -313,6 +313,7 @@ MonoBehaviour:
   _automissle: {fileID: 0}
   _attentionmarker: {fileID: 0}
   _boom: {fileID: 6102719748100292660, guid: 9e530f826982ef94bb7642bfd6c87c0a, type: 3}
+  _bigBoom: {fileID: 402685171827760845, guid: 745c1be5aa6dc4c4682c931d4f4fedf9, type: 3}
   guns:
   - {fileID: 3798269657536935526}
   - {fileID: 3523890778847658031}
