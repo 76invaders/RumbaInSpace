@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5073251342172028940}
   - component: {fileID: 5073251342172028930}
   - component: {fileID: -5076360796470760819}
+  - component: {fileID: 1239689436157409167}
   m_Layer: 0
   m_Name: Galaxy
   m_TagString: Galaxy
@@ -202,3 +203,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1239689436157409167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5073251342172028941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ee0501b7afeb264591922ad28b5f849, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _boss: {fileID: 1216608657463827152, guid: d917c4515aae7584aa0e2b64eb5f766b, type: 3}
