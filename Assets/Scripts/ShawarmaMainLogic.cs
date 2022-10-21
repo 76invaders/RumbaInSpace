@@ -8,17 +8,21 @@ public class ShawarmaMainLogic : MonoBehaviour
 {
     public float _scale = 1;
     public float _speed = 0.6f;
-    public int _nextHealth = 200;
+    public int _nextHealth = 100;
+    public int _health;
+
     GameObject _nextShawarma;
     Rigidbody2D _rigidbody2D;
 
-    public int _health;
+    private GameObject _counter;
 
     float _randomX;
     float _randomY;
+
     private void Start()
     {
         _health = _nextHealth;
+        _counter = GameObject.Find("GameLogic");
         transform.localScale = new Vector3(_scale, _scale, _scale);
         NextParams(ref _scale,ref _speed,ref _nextHealth);
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -59,16 +63,16 @@ public class ShawarmaMainLogic : MonoBehaviour
             _nextShawarma = gameObject;
             Instantiate(_nextShawarma, transform.position, transform.rotation);
             Instantiate(_nextShawarma, transform.position, transform.rotation);
+            _counter.GetComponent<Counters>().PointsCount(100);
             Destroy(gameObject);
         }
 
-        _rigidbody2D.AddForce(new Vector2(_randomX, _randomX));
+        _rigidbody2D.AddForce(new Vector2(_randomX, _randomY));
     }
 
     void OnTriggerEnter2D()
     {
         ReciveDammage(10);
-        Debug.Log($"Попал хехе {_health} осталось");
     }
 
     void NextParams(ref float scale, ref float speed,ref int health)
@@ -78,7 +82,7 @@ public class ShawarmaMainLogic : MonoBehaviour
         health = health / 2;
     }
 
-    public void ReciveDammage(int damage)
+    void ReciveDammage(int damage)
     {
         _health -= damage;
     }

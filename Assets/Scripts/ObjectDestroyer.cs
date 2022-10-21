@@ -9,7 +9,6 @@ public class ObjectDestroyer : MonoBehaviour
     {
         if(gameObject != null)
         {
-            +=
             Destroy(gameObject);
         }
 

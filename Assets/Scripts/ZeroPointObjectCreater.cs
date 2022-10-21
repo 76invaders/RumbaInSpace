@@ -10,5 +10,6 @@ public class ZeroPointObjectCreater : MonoBehaviour
         Instantiate(Galaxy);
         Instantiate(Shawarma);
         Instantiate(Cursor);
+        GameObject.Find("GameLogic").GetComponent<Counters>().GalaxyRegistrator();
     }
 }

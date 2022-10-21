@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -5076360796470760819}
   m_Layer: 0
   m_Name: Galaxy
-  m_TagString: Untagged
+  m_TagString: Galaxy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,7 +94,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5073251342172028941}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: f1f2f57151694144192d6c161ba41d2b, type: 2}
   m_CullingMode: 0

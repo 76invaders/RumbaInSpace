@@ -205,6 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46766ca05f8086446b08c9983565ebd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _counter: {fileID: 165602359467934128, guid: 8bd32650bcf3b4645bde9e797b524cc5, type: 3}
   _explosion: {fileID: 6102719748100292660, guid: 9e530f826982ef94bb7642bfd6c87c0a, type: 3}
   speed: 10
 --- !u!82 &-9066588207073978381
