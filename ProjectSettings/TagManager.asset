@@ -8,6 +8,7 @@ TagManager:
   - Shawarma
   - Base
   - Galaxy
+  - BossMissle
   layers:
   - Default
   - TransparentFX

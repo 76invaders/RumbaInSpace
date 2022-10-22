@@ -7,7 +7,7 @@ public class SpaceshipDestroyer : MonoBehaviour
     public GameObject _explosion;
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        if (hitInfo.tag == "Shawarma")
+        if (hitInfo.tag == "Shawarma" || hitInfo.tag == "BossMissle")
         {
             Instantiate(_explosion, transform.position, transform.rotation);
             Destroy(gameObject);

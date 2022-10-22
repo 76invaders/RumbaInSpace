@@ -5,13 +5,9 @@ using UnityEngine;
 
 public class BossLogic : MonoBehaviour
 {
+    public GameObject _boom, _bigBoom;
     Animator _animator;
-    public GameObject _missle, _automissle, _attentionmarker, _boom, _bigBoom;
-    public GameObject[] guns = new GameObject[5];
-
-    Vector3 _defaultPosition = new Vector3(0, 8, 0);
-    int _bossHealth = 5000;
-    int _randomvalue;
+    int _bossHealth = 20000;
 
     void Start()
     {
@@ -24,6 +20,7 @@ public class BossLogic : MonoBehaviour
         {
             _bossHealth -= 100;
             Debug.Log(_bossHealth);
+            _animator.Play("ShootAllOneMissleAnimation");
         }
         else if (hitInfo.tag == "Player")
         {
@@ -43,13 +40,4 @@ public class BossLogic : MonoBehaviour
         Instantiate(_bigBoom, new Vector3(transform.position.x, transform.position.y, 0), new Quaternion(0, 0, 0, 0));
     }
 
-    void ColliderActivator()
-    {
-        gameObject.GetComponent<BoxCollider2D>().enabled = true;
-    }
-
-    void ColliderDeactivator()
-    {
-        gameObject.GetComponent<BoxCollider2D>().enabled = false;
-    }
 }

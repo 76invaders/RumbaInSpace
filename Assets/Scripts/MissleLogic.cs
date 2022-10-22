@@ -8,7 +8,7 @@ public class MissleLogic : MonoBehaviour
 
     public float speed = 0.5f;
     Rigidbody2D _rigidbody2D;
-    
+
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
