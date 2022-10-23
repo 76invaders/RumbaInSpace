@@ -9,26 +9,45 @@ public class BossLogic : MonoBehaviour
     Animator _animator;
     int _bossHealth = 20000;
 
+    BossPhases _phases;
+
     void Start()
     {
         _animator = GetComponent<Animator>();
         _animator.Play("BossAppear");
+        _phases = GetComponent<BossPhases>();
     }
+
+    //Recive dammage logic
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        if (hitInfo.tag == "Missle")
+        if (hitInfo.tag == "Missle" || hitInfo.tag == "Player")
         {
             _bossHealth -= 100;
-            Debug.Log(_bossHealth);
-            _animator.Play("ShootAllOneMissleAnimation");
         }
-        else if (hitInfo.tag == "Player")
-        {
-            _bossHealth -= 200;
-            Debug.Log(_bossHealth);
+
+        switch (_bossHealth)
+        { 
+            case 19900:LaunchPhase(1);
+                break;
+            case 15000:LaunchPhase(2);
+                break;
+            case 10000:LaunchPhase(3);
+                break;
+            case 5000:LaunchPhase(4);
+                break;
+            default:
+                break;
         }
     }
 
+    //Phases launcher
+    void LaunchPhase(int phase)
+    {
+        _phases.LaunchPhase(phase);
+    }
+
+    //End animation scripts
     void ExplosionSpawner()
     { 
         Vector3 Spawnposition = new Vector3(transform.position.x + UnityEngine.Random.Range(-12.0f,12.0f), transform.position.y + UnityEngine.Random.Range(-12.0f, 7.0f), 0);
