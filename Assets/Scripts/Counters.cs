@@ -2,23 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 public class Counters : MonoBehaviour
 {
     //--------Обьекты вызова---------
     GameObject _Galaxy;
-
+    Scene _gameOver;
     //-------Переменные класса-------
     int points = 0;
-    int health = 3;
     bool activestate = false;
+    public int playerHP = 3;
 
     //---------Методы движка---------
-    private void Start()
-    {
 
-    }
     void FixedUpdate()
     {
+        if (playerHP == 0)
+        {
+            GameOver();
+        }
         BossApear();
     }
 
@@ -26,20 +29,25 @@ public class Counters : MonoBehaviour
     public void PointsCount(int pointsRecived) //Учет очков
     {
         points += pointsRecived;
-        Debug.Log(points);
     }
+
     public void GalaxyRegistrator() //Назначение обьекта галактики для обращения
     {
         _Galaxy = GameObject.FindGameObjectWithTag("Galaxy");
     }
 
-    void BossApear()
+    void BossApear() //Вызов босса на бой на ножах
     {
         if (points >= 6200 && activestate == false)
         {
             _Galaxy.GetComponent<Animator>().Play("GalaxyShaking");
             activestate = true;
-            Debug.Log(activestate);
         }
     }
+
+    public void GameOver()
+    {
+        SceneManager.LoadScene("Game Over");
+    }
+
 }

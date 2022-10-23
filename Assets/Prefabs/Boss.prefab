@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 2201083303838710594}
   - component: {fileID: -6802214933818673386}
   - component: {fileID: -5879734472256295112}
+  - component: {fileID: 4523026934222728072}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Shawarma
@@ -408,6 +409,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4523026934222728072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216608657463827152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e0c8f0fe2c664745b8aee4c5296133a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cutScene: {fileID: 2250589440530826102, guid: 7a262ec0957eaf14d86fe357e66197e0, type: 3}
 --- !u!1 &3523890778847658031
 GameObject:
   m_ObjectHideFlags: 0

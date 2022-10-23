@@ -9,6 +9,7 @@ public class SpaceshipDestroyer : MonoBehaviour
     {
         if (hitInfo.tag == "Shawarma" || hitInfo.tag == "BossMissle")
         {
+            GameObject.FindGameObjectWithTag("Counters").GetComponent<Counters>().playerHP -= 1;
             Instantiate(_explosion, transform.position, transform.rotation);
             Destroy(gameObject);
         }
