@@ -18,7 +18,7 @@ public class Counters : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (playerHP == 0)
+        if (playerHP <= 0)
         {
             GameOver();
         }
