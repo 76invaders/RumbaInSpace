@@ -25,7 +25,6 @@ public class BossPhases : MonoBehaviour
             //2 Phase 75%hp
             case 2:
                 {
-                    StopAllCoroutines();
                     _bossAttacks.circleRapidShotsSecond();
                     _bossAttacks.circleShotsSecond();
                     _bossAttacks.AutomissilesFireSecond();
@@ -34,7 +33,6 @@ public class BossPhases : MonoBehaviour
             //3 Phase 50%hp
             case 3:
                 {
-                    StopAllCoroutines();
                     _bossAttacks.circleRapidShotsThird();
                     _bossAttacks.circleShotsThird();
                     _bossAttacks.AutomissilesFireThird();
@@ -47,6 +45,12 @@ public class BossPhases : MonoBehaviour
                     _bossAttacks.circleRapidShotsFourth();
                     _bossAttacks.circleShotsFourth();
                     _bossAttacks.AutomissilesFireFourth();
+                }
+                break;
+            //5 Phase 0%hp
+            case 5:
+                {
+                    _bossAttacks.StopFire();
                 }
                 break;
 

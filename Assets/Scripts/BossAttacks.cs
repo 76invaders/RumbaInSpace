@@ -9,6 +9,11 @@ public class BossAttacks : MonoBehaviour
     public GameObject _missle, _automissle;
     public GameObject[] _guns = new GameObject[6];
 
+    public void StopFire()
+    {
+        StopAllCoroutines();
+    }
+
     void ShootAutomissileOne(int PlusAngle = 0)
     {
         GetComponent<AudioSource>().Play();
@@ -123,18 +128,22 @@ public class BossAttacks : MonoBehaviour
 
     public void circleRapidShotsFirst()
     {
+        StopAllCoroutines();
         StartCoroutine(circleRapidFire(60, 360));
     }
     public void circleRapidShotsSecond()
     {
+        StopAllCoroutines();
         StartCoroutine(circleRapidFire(60, 180));
     }
     public void circleRapidShotsThird()
     {
+        StopAllCoroutines();
         StartCoroutine(circleRapidFire(60, 120));
     }
     public void circleRapidShotsFourth()
     {
+        StopAllCoroutines();
         StartCoroutine(circleRapidFire(60, 90));
     }
 
@@ -148,7 +157,6 @@ public class BossAttacks : MonoBehaviour
                     ShootFromCenter(bufer);
                 }
             circleCounter -= (360/repeats);
-            Debug.Log(circleCounter);
             yield return new WaitForSeconds(0.7f);
         }
     }

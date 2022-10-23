@@ -24,20 +24,28 @@ public class BossLogic : MonoBehaviour
         if (hitInfo.tag == "Missle" || hitInfo.tag == "Player")
         {
             _bossHealth -= 100;
-        }
-
-        switch (_bossHealth)
-        { 
-            case 19900:LaunchPhase(1);
-                break;
-            case 15000:LaunchPhase(2);
-                break;
-            case 10000:LaunchPhase(3);
-                break;
-            case 5000:LaunchPhase(4);
-                break;
-            default:
-                break;
+            switch (_bossHealth)
+            {
+                case 19900:
+                    LaunchPhase(1);
+                    break;
+                case 15000:
+                    LaunchPhase(2);
+                    break;
+                case 10000:
+                    LaunchPhase(3);
+                    break;
+                case 5000:
+                    LaunchPhase(4);
+                    break;
+                case <=0:
+                    LaunchPhase(5);
+                    _animator.Play("BossEnd");
+                    break;
+                default:
+                    break;
+            }
+            Debug.Log(_bossHealth);
         }
     }
 

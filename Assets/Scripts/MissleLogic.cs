@@ -17,7 +17,7 @@ public class MissleLogic : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        if (hitInfo.tag == "Shawarma")
+        if (hitInfo.tag == "Shawarma" || hitInfo.tag == "BossMissle")
         {
             Instantiate(_explosion,transform.position,transform.rotation);
             Destroy(gameObject);
