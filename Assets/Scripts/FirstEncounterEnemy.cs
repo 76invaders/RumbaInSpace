@@ -4,21 +4,16 @@ using UnityEngine;
 
 public class FirstEncounterEnemy : MonoBehaviour
 {
-    Enemy _enemy; //убрать
-    private void Start()
-    {
-        gameObject.AddComponent<Enemy>();
-        _enemy = gameObject.GetComponent<Enemy>();
-        _enemy.Health = 100;
-    }
+    int _enemyHealth = 100;
+
     public void ReciveDammage(int damage)
     {
-        _enemy.Health -= damage;
+        _enemyHealth -= damage;
     }
 
     private void FixedUpdate()
     {
-        if (_enemy.Health <= 0)
+        if (_enemyHealth <= 0)
         {
             Debug.Log("Убил");
             gameObject.GetComponent<Animator>().Play("ShawarmaDestroingAnimation");

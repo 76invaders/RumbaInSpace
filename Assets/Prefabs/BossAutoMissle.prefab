@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9187267848369872966}
   - component: {fileID: -5365984083596370275}
   - component: {fileID: 9206063648725385106}
-  - component: {fileID: 2662287583250778000}
+  - component: {fileID: 3687539286216183825}
   m_Layer: 0
   m_Name: BossAutoMissle
   m_TagString: BossMissle
@@ -267,7 +267,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2662287583250778000
+--- !u!114 &3687539286216183825
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

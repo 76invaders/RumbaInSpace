@@ -6,9 +6,10 @@ using UnityEngine;
 
 public class BossAttacks : MonoBehaviour
 {
-    public GameObject _missle, _automissle;
+    public GameObject _missile, _automissile;
     public GameObject[] _guns = new GameObject[6];
 
+    //---Control actions---
     public void StopFire()
     {
         StopAllCoroutines();
@@ -17,49 +18,51 @@ public class BossAttacks : MonoBehaviour
     void ShootAutomissileOne(int PlusAngle = 0)
     {
         GetComponent<AudioSource>().Play();
-        _guns[2].GetComponent<BossGunFireActions>().MissileFire(_automissle, PlusAngle);
+        _guns[2].GetComponent<BossGunFireActions>().MissileFire(_automissile, PlusAngle);
     }
 
     void ShootAutomissileTwo(int PlusAngle = 0)
     {
         GetComponent<AudioSource>().Play();
-        _guns[1].GetComponent<BossGunFireActions>().MissileFire(_automissle, PlusAngle);
-        _guns[3].GetComponent<BossGunFireActions>().MissileFire(_automissle, PlusAngle);
+        _guns[1].GetComponent<BossGunFireActions>().MissileFire(_automissile, PlusAngle);
+        _guns[3].GetComponent<BossGunFireActions>().MissileFire(_automissile, PlusAngle);
     }
 
     void ShootAutomissileThree(int PlusAngle = 0)
     {
         GetComponent<AudioSource>().Play();
-        _guns[0].GetComponent<BossGunFireActions>().MissileFire(_automissle, PlusAngle);
-        _guns[2].GetComponent<BossGunFireActions>().MissileFire(_automissle, PlusAngle);
-        _guns[4].GetComponent<BossGunFireActions>().MissileFire(_automissle, PlusAngle);
+        _guns[0].GetComponent<BossGunFireActions>().MissileFire(_automissile, PlusAngle);
+        _guns[2].GetComponent<BossGunFireActions>().MissileFire(_automissile, PlusAngle);
+        _guns[4].GetComponent<BossGunFireActions>().MissileFire(_automissile, PlusAngle);
     }
 
     void ShootFromCenter(int PlusAngle = 0)
     {
-            _guns[5].GetComponent<BossGunFireActions>().MissileFire(_missle, PlusAngle);
+            _guns[5].GetComponent<BossGunFireActions>().MissileFire(_missile, PlusAngle);
     }
 
+    //---Phase actions---
     public void AutomissilesFireFirst()
     {
-        StartCoroutine(ShootAutomissileOneCorutine(10));
+        StartCoroutine(ShootAutomissileOneCorutine(8));
     }
 
     public void AutomissilesFireSecond()
     {
-        StartCoroutine(ShootAutomissileTwoCorutine(15));
+        StartCoroutine(ShootAutomissileTwoCorutine(14));
     }
 
     public void AutomissilesFireThird()
     {
-        StartCoroutine(ShootAutomissileThreeCorutine(15));
+        StartCoroutine(ShootAutomissileThreeCorutine(14));
     }
 
     public void AutomissilesFireFourth()
     {
-        StartCoroutine(ShootAutomissileThreeCorutine(10));
+        StartCoroutine(ShootAutomissileTwoCorutine(8));
     }
 
+    //---Corutine logic with params---
     private IEnumerator ShootAutomissileOneCorutine(int Dellay)
     {
         bool loop = true;
@@ -90,6 +93,8 @@ public class BossAttacks : MonoBehaviour
         }
     }
 
+
+    //---Shoot actions from center---
     public void circleShotsFirst()
     {
         StartCoroutine(circleShotsCorutine(1, 45));
@@ -109,7 +114,7 @@ public class BossAttacks : MonoBehaviour
     {
         StartCoroutine(circleShotsCorutine(4, 20));
     }
-
+    //---Corutine action from center---
     private IEnumerator circleShotsCorutine(int repeats,int steps)
     {
         while (true)
@@ -126,6 +131,7 @@ public class BossAttacks : MonoBehaviour
         }
     }
 
+    //---Rapid actions from center---
     public void circleRapidShotsFirst()
     {
         StopAllCoroutines();
@@ -147,6 +153,7 @@ public class BossAttacks : MonoBehaviour
         StartCoroutine(circleRapidFire(60, 90));
     }
 
+    //---Rapid corutine action from center---
     private IEnumerator circleRapidFire(int repeats, int steps)
     {
         int circleCounter = 0;

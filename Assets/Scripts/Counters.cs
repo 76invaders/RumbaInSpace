@@ -9,16 +9,16 @@ public class Counters : MonoBehaviour
     //--------Обьекты вызова---------
     GameObject _Galaxy;
     Scene _gameOver;
+
     //-------Переменные класса-------
-    int points = 0;
-    bool activestate = false;
-    public int playerHP = 3;
+    int _points = 0;
+    bool _activestate = false;
+    public int _playerHP = 3;
 
     //---------Методы движка---------
-
     void FixedUpdate()
     {
-        if (playerHP <= 0)
+        if (_playerHP <= 0)
         {
             GameOver();
         }
@@ -28,7 +28,7 @@ public class Counters : MonoBehaviour
     //---------Методы класса---------
     public void PointsCount(int pointsRecived) //Учет очков
     {
-        points += pointsRecived;
+        _points += pointsRecived;
     }
 
     public void GalaxyRegistrator() //Назначение обьекта галактики для обращения
@@ -38,10 +38,10 @@ public class Counters : MonoBehaviour
 
     void BossApear() //Вызов босса на бой на ножах
     {
-        if (points >= 6200 && activestate == false)
+        if (_points >= 6200 && _activestate == false)
         {
             _Galaxy.GetComponent<Animator>().Play("GalaxyShaking");
-            activestate = true;
+            _activestate = true;
         }
     }
 

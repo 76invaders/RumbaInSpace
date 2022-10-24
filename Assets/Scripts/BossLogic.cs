@@ -6,10 +6,10 @@ using UnityEngine;
 public class BossLogic : MonoBehaviour
 {
     public GameObject _boom, _bigBoom;
-    Animator _animator;
     int _bossHealth = 20000;
 
     BossPhases _phases;
+    Animator _animator;
 
     void Start()
     {
@@ -45,7 +45,7 @@ public class BossLogic : MonoBehaviour
                 default:
                     break;
             }
-            Debug.Log(_bossHealth);
+            //Debug.Log(_bossHealth);
         }
     }
 
@@ -53,13 +53,14 @@ public class BossLogic : MonoBehaviour
     void LaunchPhase(int phase)
     {
         _phases.LaunchPhase(phase);
+        //Debug.Log(phase);
     }
 
     //End animation scripts
     void ExplosionSpawner()
     { 
-        Vector3 Spawnposition = new Vector3(transform.position.x + UnityEngine.Random.Range(-12.0f,12.0f), transform.position.y + UnityEngine.Random.Range(-12.0f, 7.0f), 0);
-        Instantiate(_boom, Spawnposition, new Quaternion(0, 0, 0, 0));
+        Vector3 spawnposition = new Vector3(transform.position.x + UnityEngine.Random.Range(-12.0f,12.0f), transform.position.y + UnityEngine.Random.Range(-12.0f, 7.0f), 0);
+        Instantiate(_boom, spawnposition, new Quaternion(0, 0, 0, 0));
     }
 
     void FinalBlow()

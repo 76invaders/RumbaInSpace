@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7330941346465483433}
   - component: {fileID: 9187267848369872966}
   - component: {fileID: -5365984083596370275}
-  - component: {fileID: 7012712460552989346}
   - component: {fileID: 9206063648725385106}
   m_Layer: 0
   m_Name: BossMissle
@@ -106,19 +105,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fd1f4cf0f3d1446ab13eb8e9b260ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7012712460552989346
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8415270412203042353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e73dd6552f05cd45b25c43aa3265172, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!212 &9206063648725385106
 SpriteRenderer:
   m_ObjectHideFlags: 0

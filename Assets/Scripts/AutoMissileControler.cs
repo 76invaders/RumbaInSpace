@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AutoMissleControler : MonoBehaviour
+public class AutoMissileControler : MonoBehaviour
 {
-    Vector3 _mousePosition;
-    float _moveSpeed = 0.005f;
     Rigidbody2D _rigidBody;
+
+    float _moveSpeed = 0.005f;
+    Vector3 _mousePosition;
     Vector2 _movePoint;
     Vector3 _buffer;
 
@@ -31,7 +32,7 @@ public class AutoMissleControler : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        if (hitInfo.tag == "Missle")
+        if (hitInfo.tag == "Missile")
         {
             Destroy(gameObject);
         }

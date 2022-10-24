@@ -14,7 +14,7 @@ public class HpSystem : MonoBehaviour
 
     void FixedUpdate()
     {
-        HPCheck(_counter.playerHP);
+        HPCheck(_counter._playerHP);
     }
 
     void HPCheck(int HP)
@@ -30,7 +30,7 @@ public class HpSystem : MonoBehaviour
                 _health3.SetActive(false);
                 _health2.SetActive(false);
                 break;
-            case 0:
+            case <=0:
                 _health3.SetActive(false);
                 _health2.SetActive(false);
                 _health1.SetActive(false);
