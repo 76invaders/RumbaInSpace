@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class MissileLogic : MonoBehaviour
 {
-    public GameObject _explosion;
     public float _speed = 0.5f;
-
-    Rigidbody2D _rigidbody2D;
+    public GameObject _explosion;
+    public Rigidbody2D _rigidbody2D;
 
     void Start()
     {
-        _rigidbody2D = GetComponent<Rigidbody2D>();
         _rigidbody2D.velocity = transform.right * _speed;
     }
 

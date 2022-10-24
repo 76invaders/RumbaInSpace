@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: -5365984083596370275}
   m_Layer: 0
   m_Name: BossAutoMissile
-  m_TagString: BossMissile
+  m_TagString: BossAutoMissile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

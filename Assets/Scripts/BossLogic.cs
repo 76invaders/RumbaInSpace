@@ -21,7 +21,7 @@ public class BossLogic : MonoBehaviour
     //Recive dammage logic
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        if (hitInfo.tag == "Missle" || hitInfo.tag == "Player")
+        if (hitInfo.tag == "Missile" || hitInfo.tag == "Player")
         {
             _bossHealth -= 100;
             switch (_bossHealth)
@@ -45,7 +45,7 @@ public class BossLogic : MonoBehaviour
                 default:
                     break;
             }
-            //Debug.Log(_bossHealth);
+            Debug.Log(_bossHealth);
         }
     }
 
@@ -53,7 +53,7 @@ public class BossLogic : MonoBehaviour
     void LaunchPhase(int phase)
     {
         _phases.LaunchPhase(phase);
-        //Debug.Log(phase);
+        Debug.Log(phase);
     }
 
     //End animation scripts

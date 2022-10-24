@@ -10,7 +10,7 @@ public class FixedUiRotation : MonoBehaviour
     {
         _RectTransform = GetComponent<RectTransform>();
     }
-    void FixedUpdate()
+    void Update()
     {
         _RectTransform.rotation = Quaternion.Euler(0,0,0-_ShipTransform.rotation.z);
     }

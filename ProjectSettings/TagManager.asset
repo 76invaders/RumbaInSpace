@@ -4,14 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Missle
   - Shawarma
   - Base
   - Galaxy
   - Counters
+  - Missile
   - MIssile
-  - BossMissle
   - BossMissile
+  - BossAutoMissile
   layers:
   - Default
   - TransparentFX
