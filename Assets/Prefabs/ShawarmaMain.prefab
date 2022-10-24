@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: -827627741243189722}
   - component: {fileID: -4328838458519745109}
   - component: {fileID: -6326243738492884883}
-  - component: {fileID: 3472542069619361173}
   - component: {fileID: 5715974258960465466}
+  - component: {fileID: 4283829101582190480}
   m_Layer: 0
   m_Name: ShawarmaMain
   m_TagString: Shawarma
@@ -152,19 +152,6 @@ MonoBehaviour:
   _speed: 10
   _nextHealth: 100
   _health: 0
---- !u!114 &3472542069619361173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1216608657463827152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ab34524471a77943a90ad39f1eddecc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _shawarma: {fileID: 0}
 --- !u!82 &5715974258960465466
 AudioSource:
   m_ObjectHideFlags: 0
@@ -261,3 +248,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4283829101582190480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216608657463827152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc696d95e662704f9530bfa8bd014a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shawarma: {fileID: 1216608657463827152}

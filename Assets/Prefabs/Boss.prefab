@@ -280,8 +280,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1d17984d8bcc444da3bbb75f88ce1ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _missile: {fileID: 0}
-  _automissile: {fileID: 0}
+  _missile: {fileID: 8415270412203042353, guid: 79d8a88a88e8b33499fd9bd69ea5ed6b, type: 3}
+  _automissile: {fileID: 8415270412203042353, guid: 5ced948cf9435324181fa5dd871144a6, type: 3}
   _guns:
   - {fileID: 3798269657536935526}
   - {fileID: 3523890778847658031}

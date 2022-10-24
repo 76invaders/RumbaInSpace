@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MissleLogic : MonoBehaviour
+public class MissileLogic : MonoBehaviour
 {
     public GameObject _explosion;
     public float _speed = 0.5f;

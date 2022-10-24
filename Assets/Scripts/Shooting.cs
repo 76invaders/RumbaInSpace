@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 public class Shooting : MonoBehaviour
 {
     public Transform _firePoint;
-    public GameObject _missle;
+    public GameObject _missile;
     void Update()
     {
         if (Input.GetButtonDown("Fire1"))
@@ -17,6 +17,6 @@ public class Shooting : MonoBehaviour
 
     void Shoot()
     { 
-        Instantiate(_missle,_firePoint.position,_firePoint.rotation);
+        Instantiate(_missile,_firePoint.position,_firePoint.rotation);
     }
 }

@@ -8,8 +8,10 @@ TagManager:
   - Shawarma
   - Base
   - Galaxy
-  - BossMissle
   - Counters
+  - MIssile
+  - BossMissle
+  - BossMissile
   layers:
   - Default
   - TransparentFX

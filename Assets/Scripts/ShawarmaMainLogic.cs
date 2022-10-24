@@ -30,7 +30,7 @@ public class ShawarmaMainLogic : MonoBehaviour
         _randomY = Random.Range(-1.0f, 1.0f);
     }
 
-    private void Update()
+    private void Update() //---If out of bounds---
     {
         if (transform.position.x < -35)
         {
@@ -50,7 +50,7 @@ public class ShawarmaMainLogic : MonoBehaviour
             transform.position = new Vector3(transform.position.x, -20f, 0);
         }
     }
-    private void FixedUpdate()
+    private void FixedUpdate() //---ƒюп противника---
     {
         if (_nextHealth < 3)
         {
